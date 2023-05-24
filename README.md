@@ -1,2 +1,2 @@
 # peduli-sanitasi
-Capstone project 
+Capstone Project from Group C23-M4008
