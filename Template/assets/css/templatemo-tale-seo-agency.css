@@ -892,16 +892,16 @@ Banner Style
 
 .main-banner {
   position: relative;
-  padding: 295px 0px 185px 0px;
+  padding: 295px 0px 10px 0px;
 }
 
 .main-banner:after {
-  content: url(../images/sanitasi4.jpg);
-  top: 150px;
-  right: 0;
+  content: url(../images/Sanitasi4.png);
+  top: 60px;
+  right: 675px;
   position: absolute;
-  width: 575px;
-  height: 746px;
+  width: 200px;
+  height: 100px;
   z-index: -1;
 }
 
