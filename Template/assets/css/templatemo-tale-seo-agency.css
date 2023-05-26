@@ -536,7 +536,7 @@ Header Style
   background-color: #eee;
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
   overflow: hidden;
-  top: 110px;
+  /* top: 110px; */
   opacity: 0;
   transition: all 0.3s;
   transform: translateY(+2em);
@@ -979,12 +979,12 @@ Services Style
 }
 
 .services::before {
-  content: url(../images/Sanitasi3.jpg);
-  top: 120px;
-  left: 0;
+  content: url(../images/Sanitasi3.png);
+  top: 60px;
+  left: -60px;
   position: absolute;
-  width: 844px;
-  height: 714px;
+  width: 500px;
+  height: auto;
   z-index: -1;
 }
 
@@ -1000,30 +1000,39 @@ Services Style
   z-index: -1;
 }
 
+.services .section-heading p {
+  text-align: justify;
+}
 .services .service-item {
   border: 1px solid #f3d7ff;
   border-radius: 23px;
-  padding: 30px;
-  background-color: #fff;
+  padding: 10px;
   margin-bottom: 30px;
   transition: all 0.4s;
+  border-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
 .services .service-item h4 {
   font-size: 20px;
   color: #2a2a2a;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   line-height: 30px;
   transition: all 0.4s;
+  text-align: center;
+}
+
+.services .service-item p {
+  text-align: justify;
 }
 
 .services .service-item:hover {
   border-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 10px #11c03a;
 }
 
 .services .service-item:hover h4 {
-  color: #5b03e4;
+  color: #11c03a;
 }
 
 /* 
@@ -1224,6 +1233,34 @@ Infos Style
   margin: 50px 0 50px 0;
   /* margin-bottom: 100px; */
 }
+
+/* 
+---------------------------------------------
+Team Style
+--------------------------------------------- 
+*/
+.team-item {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+  height: calc(100% - 42px);
+  transition: 0.5s;
+}
+
+.team-item img {
+  transition: 0.5s;
+}
+
+.team-item:hover img {
+  transform: scale(1.1);
+}
+
+.team-item:hover {
+  height: 100%;
+}
+
+.team-item .btn {
+  border-radius: 38px 38px 0 0;
+}
+
 /* 
 ---------------------------------------------
 Contact Style
@@ -1358,20 +1395,25 @@ Footer Style
 --------------------------------------------- 
 */
 
+footer {
+  background-color: #0d9d2e;
+  background-color: #11c03a;
+}
 footer p {
   text-align: center;
   padding: 30px 0px;
   color: #2a2a2a;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 footer p a {
-  color: #2a2a2a;
+  color: white;
+  font-weight: 800;
   transition: all 0.3s;
 }
 
 footer p a:hover {
-  color: #5b03e4;
+  color: #050505;
 }
 
 /* 
@@ -1381,8 +1423,8 @@ Page Heading Style
 */
 
 .page-heading {
-  padding: 120px 0px;
-  margin-top: 110px;
+  padding: 50px 0px;
+  /* margin-top: 110px; */
 }
 
 .page-heading::before {
@@ -1397,9 +1439,10 @@ Page Heading Style
 
 .page-heading h6 {
   font-size: 20px;
-  color: #5b03e4;
+  color: #11c03a;
   text-transform: uppercase;
   font-weight: 700;
+  padding-top: 100px;
 }
 
 .page-heading .line-dec {
@@ -1410,7 +1453,7 @@ Page Heading Style
 }
 
 .page-heading h4 {
-  font-size: 52px;
+  font-size: 42px;
   color: #2a2a2a;
   font-weight: 700;
   line-height: 70px;
@@ -1419,7 +1462,7 @@ Page Heading Style
 
 .page-heading h4 em {
   font-style: normal;
-  color: #5b03e4;
+  color: #11c03a;
 }
 
 .page-heading h4 span {
@@ -1652,6 +1695,7 @@ Happy Clients Style
 
 .happy-clients ul.nacc li img {
   padding-left: 45px;
+  z-index: -1;
 }
 
 .happy-clients ul.nacc li h4 {
