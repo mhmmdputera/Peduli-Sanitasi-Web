@@ -1115,7 +1115,7 @@ Infos Style
 */
 
 .infos {
-  background-image: url(../images/infos-bg.jpg);
+  background-image: url(../images/infos-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1127,16 +1127,19 @@ Infos Style
   overflow: hidden;
   background-color: #fff;
   border-radius: 23px;
-  height: 500px;
 }
 
 .infos .main-content .left-image {
-  background-image: url(../images/left-infos.jpg);
+  background-image: url(../images/left-infos.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   width: 100%;
   height: 100%;
+}
+
+.infos .section-heading .line-dec {
+  margin: 0 auto 20px auto;
 }
 
 .infos .main-content .left-image img {
@@ -1145,12 +1148,11 @@ Infos Style
 
 .infos .main-content .section-heading {
   padding: 60px 60px 30px 60px;
+  text-align: center;
 }
 
-.infos .main-content .funFactSection {
-  /* font-size: 5px; */
-  text-align: center;
-  margin-top: 50px;
+.infos .main-content .funFactSection span {
+  font-weight: bold;
 }
 
 .infos .main-content .skills {
@@ -1216,10 +1218,11 @@ Infos Style
   margin-top: -15px;
   padding: 0px 60px 60px 60px;
 }
+
 #funFact {
-  font-size: 24px;
   text-align: center;
-  margin-top: 50px;
+  margin: 50px 0 50px 0;
+  /* margin-bottom: 100px; */
 }
 /* 
 ---------------------------------------------
@@ -1809,6 +1812,11 @@ Happy Steps Style
   transition: color 200ms ease-in-out;
 }
 
+.most-list .accordion-head span {
+  font-weight: bold;
+  color: black;
+}
+
 @media screen and (min-width: 768px) {
   .most-list .accordion-head {
     padding: 1rem;
@@ -2048,7 +2056,7 @@ body {
     display: none;
   }
   .main-banner {
-    padding: 185px 0px;
+    padding: 50px 0px;
   }
   .main-banner h4 {
     font-size: 36px;
@@ -2110,6 +2118,7 @@ body {
   }
   .infos .main-content .left-image img {
     display: inline-block;
+    height: 400px;
   }
   .contact-us .contact-us-content,
   .contact-us .contact-us-content #contact-form {

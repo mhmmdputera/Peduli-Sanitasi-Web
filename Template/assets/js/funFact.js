@@ -11,7 +11,7 @@ function changeFact() {
             var factText = currentFact.fact;
             var sourceText = currentFact.source;
 
-            document.getElementById("funFact").innerHTML = factText + "<br><span>" + sourceText + "</span>";
+            document.getElementById("funFact").innerHTML = factText + "<br><br><span>" + sourceText + "</span>";
             currentIndex = (currentIndex + 1) % data.length;
         })
         .catch(function (error) {
