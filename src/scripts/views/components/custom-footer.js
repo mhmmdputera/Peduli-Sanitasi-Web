@@ -28,9 +28,10 @@ class CustomFooter extends HTMLElement {
           </div>
         </div>
         <div class="col-lg-12">
-          <p>Copyright © 2023 <a href="#">- Capstone Group C23-M4008 </a>
-            
-          </p>
+        <div class="copyright">
+        <p>Copyright © 2023 <a href="#">- Capstone Group C23-M4008 </a>
+        </p>
+        </div>
         </div>
       </div>
     </footer>
