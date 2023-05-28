@@ -81,8 +81,6 @@ class NavBar extends HTMLElement {
 
     document.addEventListener('DOMContentLoaded', function() {
       document.addEventListener('scroll', onScroll);
-
-      // Smooth Scroll
       const smoothScrollLinks = document.querySelectorAll('.scroll-to-section a[href^="#"]');
       smoothScrollLinks.forEach(function(link) {
         link.addEventListener('click', function(e) {

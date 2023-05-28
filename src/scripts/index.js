@@ -7,7 +7,6 @@ import '../styles/flex-slider.scss';
 import '../styles/fontawesome.scss';
 import '../styles/owl.scss';
 import '../public/vendor/bootstrap/css/bootstrap.min.scss';
-// import '../public/js/owl-carousel'
 import './views/components/navbar';
 import './views/components/main-banner';
 import './views/components/custom-footer'
