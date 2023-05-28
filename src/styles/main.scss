@@ -972,6 +972,7 @@ Services Style
 .services {
   position: relative;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .services .section-heading h2 {
@@ -1003,6 +1004,7 @@ Services Style
 .services .section-heading p {
   text-align: justify;
 }
+
 .services .service-item {
   border: 1px solid #f3d7ff;
   border-radius: 23px;
@@ -1011,6 +1013,7 @@ Services Style
   transition: all 0.4s;
   border-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 
 .services .service-item h4 {
@@ -1029,6 +1032,7 @@ Services Style
 .services .service-item:hover {
   border-color: #fff;
   box-shadow: 0px 0px 10px #11c03a;
+  background-color: whitesmoke;
 }
 
 .services .service-item:hover h4 {
@@ -1706,6 +1710,7 @@ Happy Clients Style
 .happy-clients .naccs {
   position: relative;
   overflow: hidden;
+  // margin-bottom: 50px;
 }
 
 .happy-clients .naccs .menu {
@@ -1879,6 +1884,7 @@ Happy Steps Style
 
 .most-list {
   position: relative;
+  margin-bottom: 50px;
 }
 
 .most-list .sectionlist {
