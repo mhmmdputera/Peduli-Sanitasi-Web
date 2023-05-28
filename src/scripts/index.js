@@ -1,5 +1,4 @@
 import App from './views/app';
-import 'jquery';
 import 'regenerator-runtime';
 import '../styles/main.scss';
 import '../styles/animate.scss';
@@ -15,21 +14,37 @@ import './views/components/sanitasi-sampah'
 import './views/components/funt-fact'
 import './views/components/article-section'
 import '../funFactsData'
+import 'jquery';
 import 'owl.carousel';
+import '../public/js/owl-carousel'
 
-$('.owl-features').owlCarousel({
-    center: true,
-  items:2,
-  loop:true,
-  nav: true,
-  margin:30,
-  responsive:{
-    992:{
-        items:3
-    },
-    1200:{
-        items:4
-    }
-  }
+
+const app = new App({
+  button: document.querySelector('.button-container'),
+  drawer: document.querySelector('nav'),
+  content: document.querySelector('main'),
 });
 
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
+});
+
+// $('.owl-features').owlCarousel({
+//     center: true,
+//   items:2,
+//   loop:true,
+//   nav: true,
+//   margin:30,
+//   responsive:{
+//     992:{
+//         items:3
+//     },
+//     1200:{
+//         items:4
+//     }
+//   }
+// });

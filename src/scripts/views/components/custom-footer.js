@@ -15,7 +15,7 @@ class CustomFooter extends HTMLElement {
             </p>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <h2 class="useful_text">Menus</h2>
+            <h2 class="useful_text">Menu</h2>
             <div class="footer_links">
               <ul>
                 <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>

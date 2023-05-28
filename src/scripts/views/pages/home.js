@@ -1,7 +1,17 @@
+import '../components/main-banner';
+import '../components/tentang-sanitasi';
+import '../components/sanitasi-sampah';
+import '../components/article-section';
+import '../components/funt-fact';
+
 const Home = {
     async render() {
       return `
-        <h2>Now Playing Page</h2>
+      <main-banner></main-banner>
+      <tentang-sanitasi></tentang-sanitasi>
+      <sanitasi-sampah></sanitasi-sampah>
+      <article-section></article-section>
+      <fun-fact></fun-fact>
       `;
     },
    
