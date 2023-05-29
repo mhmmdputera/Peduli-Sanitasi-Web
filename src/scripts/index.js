@@ -13,6 +13,7 @@ import './views/components/tentang-sanitasi'
 import './views/components/sanitasi-sampah'
 import './views/components/funt-fact'
 import './views/components/article-section'
+import './views/components/about-team'
 import '../funFactsData'
 import 'jquery';
 import 'owl.carousel';

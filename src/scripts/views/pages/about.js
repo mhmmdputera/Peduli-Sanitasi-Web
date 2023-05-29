@@ -1,7 +1,7 @@
 const About = {
     async render() {
       return `
-        <h2>INI HALAMAN ABOUT</h2>
+       <about-team></about-team>
       `;
     },
    
