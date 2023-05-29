@@ -10,7 +10,6 @@ const Home = {
       <main-banner></main-banner>
       <tentang-sanitasi></tentang-sanitasi>
       <sanitasi-sampah></sanitasi-sampah>
-      <article-section></article-section>
       <fun-fact></fun-fact>
       `;
     },

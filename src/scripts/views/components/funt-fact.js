@@ -30,8 +30,8 @@ class FunFact extends HTMLElement {
       </div>
     </div>
       `;
-      var currentIndex = 0;
-      var delayInSeconds = 3;
+      let currentIndex = 0;
+      let delayInSeconds = 3;
       
       function changeFact() {
           fetch("../funFactsData.json")
@@ -39,9 +39,9 @@ class FunFact extends HTMLElement {
                   return response.json();
               })
               .then(function (data) {
-                  var currentFact = data[currentIndex];
-                  var factText = currentFact.fact;
-                  var sourceText = currentFact.source;
+                  let currentFact = data[currentIndex];
+                  let factText = currentFact.fact;
+                  let sourceText = currentFact.source;
       
                   document.getElementById("funFact").innerHTML = factText + "<br><br><span>" + sourceText + "</span>";
                   currentIndex = (currentIndex + 1) % data.length;
