@@ -14,7 +14,7 @@ import './views/components/sanitasi-sampah'
 import './views/components/funt-fact'
 import './views/components/article-section'
 import './views/components/about-team'
-import './views/components/forum-diskusi'
+
 import '../funFactsData'
 // IMPORT CSS 
 // import '../styles/forum.css'
