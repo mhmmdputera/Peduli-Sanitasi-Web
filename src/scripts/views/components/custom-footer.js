@@ -19,7 +19,7 @@ class CustomFooter extends HTMLElement {
             <div class="footer_links">
               <ul>
                 <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                <li class="scroll-to-section"><a href="#projects">Article</a></li>
+                <li class="scroll-to-section"><a href="#/article">Article</a></li>
                 <li class="scroll-to-section"><a href="#">Forum Diskusi</a></li>
                 <li class="scroll-to-section"><a href="about.html">About</a></li>
                 <li class="scroll-to-section"><a href="#">Log In</a></li>
