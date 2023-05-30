@@ -1,6 +1,7 @@
 import App from './views/app';
 import 'regenerator-runtime';
 import '../styles/main.scss';
+import '../styles/forum.scss';
 import '../styles/animate.scss';
 import '../styles/flex-slider.scss';
 import '../styles/fontawesome.scss';
@@ -15,10 +16,8 @@ import './views/components/funt-fact';
 import './views/components/article-section';
 import './views/components/about-team';
 import './views/components/article-page';
-
+import './views/components/discussion-form'
 import '../funFactsData'
-// IMPORT CSS 
-// import '../styles/forum.css'
 import 'jquery';
 import 'owl.carousel';
 import '../public/js/owl-carousel'
