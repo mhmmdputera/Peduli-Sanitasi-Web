@@ -17,10 +17,10 @@ class CustomFooter extends HTMLElement {
           <div class="col-lg-4 col-sm-6">
             <h2 class="useful_text">Menu</h2>
             <div class="footer_links">
-              <ul>
+              <ul class="ul-footer">
                 <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                 <li class="scroll-to-section"><a href="#/article">Article</a></li>
-                <li class="scroll-to-section"><a href="#">Forum Diskusi</a></li>
+                <li class="scroll-to-section"><a href="#/diskusi">Forum Diskusi</a></li>
                 <li class="scroll-to-section"><a href="about.html">About</a></li>
                 <li class="scroll-to-section"><a href="#">Log In</a></li>
               </ul>
