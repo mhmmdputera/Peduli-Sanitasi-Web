@@ -2283,6 +2283,65 @@ Most Asked Style
   opacity: 0.8;
 }
 
+// ---------------------------------------------
+// Article Page Style
+// ---------------------------------------------
+
+.article_page{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.article_page .title {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.article_item {
+  display: flex;
+  flex-direction: column;
+}
+.article_item h1{
+  padding-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.article_item .author {
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.article_item .author span {
+  font-weight: bold;
+}
+
+.article_item img{
+  display: flex;
+  align-self: center;
+  width: 150px;
+  height: 150px;
+  justify-items: center;
+}
+
+.article_item .description {
+  padding-top: 10px ;
+  font-size: 11px;
+  text-align: justify;
+  margin-bottom: 8px;
+  line-height: 20px;
+}
+
+.article_item .quotes{
+  font-size: 10px;
+  font-style: italic;
+  text-align: justify;
+}
+
 /* 
 ---------------------------------------------
 Responsive Style
