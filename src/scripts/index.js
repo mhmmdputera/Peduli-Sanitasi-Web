@@ -17,6 +17,7 @@ import './views/components/funt-fact';
 import './views/components/article-section';
 import './views/components/about-team';
 import './views/components/article-page';
+import './views/components/detail-article';
 import './views/components/discussion-form';
 import '../articleData.json';
 import '../funFactsData';
