@@ -73,9 +73,9 @@ class ArticlePage extends HTMLElement {
           <div class="col-lg-3 col-md-5 col-sm-8 col-6 border border-5 border-success rounded shadow">
             <div class="article_item" tabindex="0">
               <h1>${item.title}</h1>
-              <p class="author">Penulis : <span>${item.author}</span> (${item.tanggal})</p>
+              <p class="author">Penulis : <span>${item.author}</span> (${item.date})</p>
               <img src="${item.image}" alt="${item['image-name']}" class="img-fluid">
-              ${description.slice(0, 150)} ...
+              ${description.slice(0, 150)} ... <a href="#/article/${item.id}">Baca Selengkapnya!</a>
             </div>
           </div>
         `;
