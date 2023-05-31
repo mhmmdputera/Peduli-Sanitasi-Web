@@ -19,7 +19,11 @@ class NavBar extends HTMLElement {
         <ul>
         <li class="app-bar__item"><a href="/" class="active">Home</a></li>
         <li class="app-bar__item"><a href="#/article">Article</a></li>
+<<<<<<< HEAD
         <li class="app-bar__item"><a href="#/diskusi">Forum Diskusi</a></li>
+=======
+        <li class="app-bar__item"><a href="#">Forum Diskusi</a></li>
+>>>>>>> 0284cc6583e810b260f8cd4f4b8a4cee2262b078
         <li class="app-bar__item"><a href="#/about">About</a></li>
         <li class="app-bar__item"><a href="#">Log In</a></li>
           </li>
