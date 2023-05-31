@@ -6,6 +6,7 @@ import '../styles/animate.scss';
 import '../styles/flex-slider.scss';
 import '../styles/fontawesome.scss';
 import '../styles/owl.scss';
+import '../styles/detail-article.scss';
 import '../public/vendor/bootstrap/css/bootstrap.min.scss';
 import './views/components/navbar';
 import './views/components/main-banner';
@@ -16,8 +17,9 @@ import './views/components/funt-fact';
 import './views/components/article-section';
 import './views/components/about-team';
 import './views/components/article-page';
-import './views/components/discussion-form'
-import '../funFactsData'
+import './views/components/discussion-form';
+import '../articleData.json';
+import '../funFactsData';
 import 'jquery';
 import 'owl.carousel';
 import '../public/js/owl-carousel'
