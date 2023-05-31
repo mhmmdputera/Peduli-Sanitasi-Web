@@ -1,0 +1,247 @@
+// ---------------------------------------------
+// Detail Article Style
+// ---------------------------------------------
+.detail_article {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 15px 15px 15px;
+  }
+  
+  .detail_article h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .detail_article .author {
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  .detail_article .author span {
+    font-weight: bold;
+  }
+  
+  .detail_article img {
+    display: flex;
+    align-self: center;
+    width: 75%;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+  
+  .detail_article .deskripsi {
+    margin: 0;
+  }
+  
+  .detail_article .deskripsi p {
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 16px;
+    margin-top: 0;
+    font-size: 10px;
+  }
+  
+  .detail_article .deskripsi ul {
+    padding-left: 40px;
+    line-height: 25px;
+    text-align: justify;
+    font-size: 10px;
+    list-style: disc;
+  }
+  
+  .detail_article .deskripsi h3 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .detail_article .deskripsi h4 {
+    margin: 0;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  .detail_article .deskripsi .isi {
+    padding-left: 20px;
+    padding-top: 0;
+    text-align: justify;
+    line-height: 25px;
+    font-size: 10px;
+  }
+  
+  .deskripsi .isi_1 {
+    padding-left: 40px;
+    padding-top: 0;
+    text-align: justify;
+    line-height: 25px;
+    font-size: 10px;
+  }
+  
+  .detail_article .deskripsi .quotes {
+    display: flex;
+    text-align: center;
+    line-height: 25px;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 20px;
+    margin-top: -20px;
+    font-size: 9px;
+  }
+  
+  // ---------------------------------------------
+// Responsive Detail Article Styling
+// ---------------------------------------------
+@media (min-width: 320px) {
+    .detail_article {
+        margin: 100px 25px 25px 25px;
+    }
+    .detail_article h1 {
+        font-size: 24px;
+    }
+  
+    .detail_article .author {
+        font-size: 12px;
+    }
+    .detail_article img {
+        width: 230px;
+    }
+  
+    .detail_article .deskripsi p {
+        font-size: 12px;
+    }
+  
+    .detail_article .deskripsi ul {
+      list-style-type: disc;
+        font-size: 12px;
+    }
+  
+    .detail_article .deskripsi h3 {
+        font-size: 14px;
+    }
+  
+    .detail_article .deskripsi h4 {
+        font-size: 12px;
+    }
+  
+    .detail_article .deskripsi .isi {
+        font-size: 12px;
+    }
+  
+    .detail_article .deskripsi .isi_1 {
+        font-size: 12px;
+    }
+  
+    .detail_article .deskripsi .quotes {
+        font-size: 11px;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    .detail_article {
+        margin: 100px 50px 50px 50px;
+    }
+    .detail_article h1 {
+        font-size: 28px;
+    }
+  
+    .detail_article .author {
+        font-size: 14px;
+    }
+    .detail_article img {
+        width: 290px;
+    }
+  
+    .detail_article .deskripsi p {
+        font-size: 14px;
+    }
+  
+    .detail_article .deskripsi ul {
+        font-size: 14px;
+    }
+  
+    .detail_article .deskripsi h3 {
+        font-size: 16px;
+    }
+  
+    .detail_article .deskripsi h4 {
+        font-size: 14px;
+    }
+  
+    .detail_article .deskripsi .isi {
+        font-size: 14px;
+    }
+  
+    .detail_article .deskripsi .isi_1 {
+        font-size: 14px;
+    }
+  
+    .detail_article .deskripsi .quotes {
+        font-size: 13px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .detail_article {
+        margin: 100px 75px 75px 75px;
+    }
+    .detail_article h1 {
+        font-size: 30px;
+    }
+  
+    .detail_article .author {
+        font-size: 16px;
+    }
+  
+    .detail_article img {
+        width: 384px;
+    }
+  
+    .detail_article .deskripsi p {
+        font-size: 16px;
+    }
+  
+    .detail_article .deskripsi ul {
+        font-size: 16px;
+    }
+  
+    .detail_article .deskripsi h3 {
+        font-size: 18px;
+    }
+  
+    .detail_article .deskripsi h4 {
+        font-size: 16px;
+    }
+  
+    .detail_article .deskripsi .isi {
+        font-size: 16px;
+    }
+  
+    .detail_article .deskripsi .isi_1 {
+        font-size: 16px;
+    }
+  
+    .detail_article .deskripsi .quotes {
+        font-size: 15px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .detail_article {
+        margin: 100px 100px 75px 100px;
+    }
+    .detail_article h1 {
+        font-size: 32px;
+    }
+  
+    .detail_article img {
+        width: 512px;
+    }
+  
+    .detail_article .deskripsi h3 {
+        font-size: 19px;
+    }
+  }
