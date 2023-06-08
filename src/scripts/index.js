@@ -7,6 +7,7 @@ import '../styles/flex-slider.scss';
 import '../styles/fontawesome.scss';
 import '../styles/owl.scss';
 import '../styles/detail-article.scss';
+import '../styles/login-register-style.css';
 import '../public/vendor/bootstrap/css/bootstrap.min.scss';
 import './views/components/navbar';
 import './views/components/main-banner';
