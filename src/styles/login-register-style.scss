@@ -49,5 +49,14 @@
   cursor: pointer;
   display: inline-block;
   // margin-top: 150px;
-  padding: 180px 5px 20px 40px;
+  padding: 70px 5px 20px 40px;
+}
+
+.text {
+  color: #0e982e;
+  font-weight: bolder;
+}
+
+.text:hover {
+  color: black;
 }

@@ -69,7 +69,7 @@ class LoginSection extends HTMLElement {
 
                       <p class="mb-5 pb-lg-2 mt-4" style="color: #393f81;">
                         Don't have an account?
-                        <a href="#/register" style="color: #393f81;"
+                        <a href="#/register" class="text"
                           >Register here</a
                         >
                       </p>
