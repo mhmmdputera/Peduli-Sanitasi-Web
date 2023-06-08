@@ -21,6 +21,7 @@ import './views/components/article-page';
 import './views/components/detail-article';
 import './views/components/discussion-form';
 import './views/components/login-section'
+import './views/components/register-section'
 import '../articleData.json';
 import '../funFactsData';
 import 'jquery';

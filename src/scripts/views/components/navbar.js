@@ -13,7 +13,7 @@ class NavBar extends HTMLElement {
   </button>
       </div>
       <div class="app-bar__brand" id="content">
-        <img src="./images/logo.png" alt="Logo DineOutNow" />
+        <img src="./images/Logo Navbar - No Background.png" alt="Logo Peduli Sanitasi" />
       </div>
       <nav id="navigationDrawer" class="app-bar__navigation">
         <ul>
@@ -28,7 +28,15 @@ class NavBar extends HTMLElement {
     </header>
    
     `;
-
+    const navbar = document.querySelector('.app-bar');
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        if (scrollPosition > 0) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
    
     
     

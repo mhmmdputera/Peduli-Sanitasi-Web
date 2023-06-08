@@ -5,20 +5,22 @@ class LoginSection extends HTMLElement {
   
     render() {
       this.innerHTML = `
+      <div class="myspace"></div>
       <section class="vh-100 gradient-custom-3">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col col-xl-10">
             <div class="card" style="border-radius: 1rem;">
               <div class="row g-0">
-                <div class="col-md-6 col-lg-5 d-none d-md-block">
-                  <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
-                    alt="login form"
-                    class="img-fluid"
-                    style="border-radius: 1rem 0 0 1rem;"
-                  />
-                </div>
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img
+                src="images/Logo Login 2.png"
+                alt="login form"
+                class="foto"
+                style="border-radius: 1rem 0 0 1rem;"
+              />
+            </div>
+            
                 <div class="col-md-6 col-lg-7 d-flex align-items-center">
                   <div class="card-body p-4 p-lg-5 text-black">
                     <form>
@@ -67,7 +69,7 @@ class LoginSection extends HTMLElement {
 
                       <p class="mb-5 pb-lg-2 mt-4" style="color: #393f81;">
                         Don't have an account?
-                        <a href="register.html" style="color: #393f81;"
+                        <a href="#/register" style="color: #393f81;"
                           >Register here</a
                         >
                       </p>
@@ -92,14 +94,15 @@ class LoginSection extends HTMLElement {
       
         // Your web app's Firebase configuration
         const firebaseConfig = {
-          apiKey: "YOUR_API_KEY",
-          authDomain: "YOUR_AUTH_DOMAIN",
-          databaseURL: "YOUR_DATABASE_URL",
-          projectId: "YOUR_PROJECT_ID",
-          storageBucket: "YOUR_STORAGE_BUCKET",
-          messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-          appId: "YOUR_APP_ID",
-          measurementId: "YOUR_MEASUREMENT_ID"
+          apiKey: "AIzaSyDAit4jZgn7GxPxfVn7_PJnfVOsBMmQU8M",
+          authDomain: "peduli-sanitasi.firebaseapp.com",
+          databaseURL:
+            "https://peduli-sanitasi-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "peduli-sanitasi",
+          storageBucket: "peduli-sanitasi.appspot.com",
+          messagingSenderId: "74325752547",
+          appId: "1:74325752547:web:222b1dc8724364f733e3d6",
+          measurementId: "G-KLYKPS49PK",
         };
       
         // Initialize Firebase
@@ -121,7 +124,7 @@ class LoginSection extends HTMLElement {
               update(ref(database, "users/" + user.uid), {
                 last_login: date,
               });
-              window.location.href = "index.html";
+              window.location.href = "#/diskusi";
             })
             .catch((error) => {
               const errorCode = error.code;
