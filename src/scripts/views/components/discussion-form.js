@@ -1,10 +1,16 @@
+import Swal from 'sweetalert2';
 class DiscussionForm extends HTMLElement {
   connectedCallback() {
 
     if (!this.isUserLoggedIn()) {
-      alert("Anda harus login terlebih dahulu!");
+      Swal.fire({
+        title: 'Anda harus login terlebih dahulu!',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      }).then(() => {
+        window.location.href = '#/login';
+      });
 
-      window.location.href = '#/login';
       return;
     }
 
@@ -23,7 +29,6 @@ class DiscussionForm extends HTMLElement {
   }
 
   render() {
-    
     this.innerHTML = `
     <div class="space"></div>
     <div class="container">
