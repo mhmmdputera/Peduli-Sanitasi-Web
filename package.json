@@ -39,6 +39,7 @@
   "dependencies": {
     "jquery": "^3.7.0",
     "owl.carousel": "^2.3.4",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "sweetalert2": "^11.7.11"
   }
 }

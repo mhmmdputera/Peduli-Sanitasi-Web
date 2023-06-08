@@ -1,29 +1,11 @@
 class DiscussionForm extends HTMLElement {
   connectedCallback() {
-
-    if (!this.isUserLoggedIn()) {
-      alert("Anda harus login terlebih dahulu!");
-
-      window.location.href = '#/login';
-      return;
-    }
-
     this.render();
     this.addEventListeners();
     this.posts = [];
   }
 
-  isUserLoggedIn() {
-   const userData = sessionStorage.getItem("userData");
-   if (userData) {
-     const user = JSON.parse(userData);
-     return user !== null;
-   }
-   return false;
-  }
-
   render() {
-    
     this.innerHTML = `
     <div class="space"></div>
     <div class="container">

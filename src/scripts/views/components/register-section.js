@@ -70,7 +70,7 @@ class RegisterSection extends HTMLElement {
 
                     <p class="text-center text-muted mt-5 mb-0">
                       Have already an account?
-                      <a href="#/login" class="fw-bold text-body"
+                      <a href="#/login" class="text"
                         ><u>Login here</u></a
                       >
                     </p>

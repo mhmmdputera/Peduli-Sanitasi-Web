@@ -30,16 +30,28 @@ class NavBar extends HTMLElement {
     `;
     const navbar = document.querySelector('.app-bar');
     window.addEventListener('scroll', function () {
-        const scrollPosition = window.scrollY;
-        if (scrollPosition > 0) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 0) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     });
-   
+
+    // const diskusiLink = document.querySelector('.app-bar__item a[href="#/diskusi"]');
+    // const loginLink = document.querySelector('.app-bar__item a[href="#/login"]');
     
-    
+    // window.addEventListener('load', () => {
+    //   const isLoggedIn = checkUserLoginStatus(); 
+      
+    //   if (!isLoggedIn) {
+    //     diskusiLink.style.display = 'none';
+    //   }
+    // });
+
+    // function checkUserLoginStatus() {
+    //   return false; 
+    // }
   }
 }
 

@@ -27,6 +27,7 @@ import '../funFactsData';
 import 'jquery';
 import 'owl.carousel';
 import '../public/js/owl-carousel'
+import Swal from 'sweetalert2';
 
 
 const app = new App({
