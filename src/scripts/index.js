@@ -7,7 +7,7 @@ import '../styles/flex-slider.scss';
 import '../styles/fontawesome.scss';
 import '../styles/owl.scss';
 import '../styles/detail-article.scss';
-import '../styles/login-register-style.css';
+import '../styles/login-register-style.scss';
 import '../public/vendor/bootstrap/css/bootstrap.min.scss';
 import './views/components/navbar';
 import './views/components/main-banner';
@@ -20,6 +20,7 @@ import './views/components/about-team';
 import './views/components/article-page';
 import './views/components/detail-article';
 import './views/components/discussion-form';
+import './views/components/login-section'
 import '../articleData.json';
 import '../funFactsData';
 import 'jquery';

@@ -21,7 +21,7 @@ class NavBar extends HTMLElement {
         <li class="app-bar__item"><a href="#/article">Article</a></li>
         <li class="app-bar__item"><a href="#/diskusi">Forum Diskusi</a></li>
         <li class="app-bar__item"><a href="#/about">About</a></li>
-        <li class="app-bar__item"><a href="#">Log In</a></li>
+        <li class="app-bar__item"><a href="#/login">Log In</a></li>
           </li>
         </ul>
       </nav>
