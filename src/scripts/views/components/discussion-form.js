@@ -44,7 +44,7 @@ class DiscussionForm extends HTMLElement {
       <div class="section-heading">
         <h2>Forum <em>Diskusi</em></h2>
         <div class="line-dec"></div>
-        <h4>Selamat datang di Forum Diskusi Web Peduli Sanitasi!</h4>
+        <h5>Selamat datang di Forum Diskusi Web Peduli Sanitasi!</h5>
         <p>Mari kita jadikan forum ini sebagai wadah yang positif untuk berbagi pengalaman, pengetahuan, dan inovasi terkait sanitasi. Bersama-sama, kita dapat menciptakan perubahan yang signifikan dan berdampak positif bagi kesehatan dan kualitas hidup banyak orang.</p>
         <form id="postForm">
           <label for="author">Nama:</label>

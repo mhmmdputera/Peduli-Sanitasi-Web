@@ -41,7 +41,7 @@ class TentangSanitasi extends HTMLElement {
                         <div>
                           <div class="row">
                             <div class="col-lg-7">
-                              <h4>Berikut manfaat dari sanitasi:</h4>
+                              <h5>Berikut manfaat dari sanitasi:</h5>
                               <div class="line-dec"></div>
                               <p>
                                 1. Menciptakan lingkungan yang lebih bersih, sehat, dan nyaman untuk ditempati.
@@ -60,7 +60,7 @@ class TentangSanitasi extends HTMLElement {
                                 semua orang.
                               </p>
                             </div>
-                            <div class="col-lg-5 align-self-center">
+                            <div class="col-lg-5 align-self-center pic">
                               <img src="images/Manfaat Sanitasi.png" alt="">
                             </div>
                           </div>
@@ -70,7 +70,7 @@ class TentangSanitasi extends HTMLElement {
                         <div>
                           <div class="row">
                             <div class="col-lg-7">
-                              <h4>Berikut beberapa upaya untuk meningkatkan kualitas sanitasi:</h4>
+                              <h5>Berikut beberapa upaya untuk meningkatkan kualitas sanitasi:</h5>
                               <div class="line-dec"></div>
                               <p>
                                 1. Terus meningkatkan kebiasaan hidup sehat dalam kehidupan sehari-hari
@@ -88,7 +88,7 @@ class TentangSanitasi extends HTMLElement {
                                 kualitas hidup masyarakat secara keseluruhan.
                               </p>
                             </div>
-                            <div class="col-lg-5 align-self-center">
+                            <div class="col-lg-5 align-self-center pic">
                               <img src="images/Upaya Sanitasi.png" alt="">
                             </div>
                           </div>
@@ -98,7 +98,7 @@ class TentangSanitasi extends HTMLElement {
                         <div>
                           <div class="row">
                             <div class="col-lg-7">
-                              <h4>Berikut contoh penerapan sanitasi di lingkungan:</h4>
+                              <h5>Berikut contoh penerapan sanitasi di lingkungan:</h5>
                               <div class="line-dec"></div>
                               <div class="most-list sectionlist">
                                 <div class="container">
@@ -181,7 +181,7 @@ class TentangSanitasi extends HTMLElement {
                                 </div>
                               </div>
                             </div>
-                            <div class="col-lg-5 align-self-center">
+                            <div class="col-lg-5 align-self-center pic">
                               <img src="images/Penerapan Sanitasi.png" alt="">
                             </div>
                           </div>
@@ -191,7 +191,7 @@ class TentangSanitasi extends HTMLElement {
                         <div>
                           <div class="row">
                             <div class="col-lg-7">
-                              <h4>Berikut dampak kesahatan yang diakibatkan dari sanitasi yang buruk:</h4>
+                              <h5>Berikut dampak kesahatan yang diakibatkan dari sanitasi yang buruk:</h5>
                               <div class="line-dec"></div>
                               <div class="most-list sectionlist">
                                 <div class="container">
@@ -275,7 +275,7 @@ class TentangSanitasi extends HTMLElement {
                                 </div>
                               </div>
                             </div>
-                            <div class="col-lg-5 align-self-center">
+                            <div class="col-lg-5 align-self-center pic">
                               <img src="images/Dampak Sanitasi.png" alt="">
                             </div>
                           </div>

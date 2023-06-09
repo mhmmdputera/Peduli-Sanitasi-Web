@@ -52,6 +52,7 @@ class ArticlePage extends HTMLElement {
       <div class="container">
         <div class="article_page">
           <h1 class="title">DAFTAR ARTIKEL</h1>
+ 
 	  	<div class="col-12">
           		<div class="row gap-5 justify-content-center">
             ${this.generateArticleItems()}

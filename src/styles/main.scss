@@ -181,6 +181,7 @@ p {
   font-size: 15px;
   line-height: 30px;
   color: #2a2a2a;
+  text-align: justify;
 }
 
 img {
@@ -256,8 +257,8 @@ body {
 }
 
 .section {
-  padding-top: 30px;
-  margin-top: 90px;
+  // padding-top: 30px;
+  margin-top: 20px;
 }
 
 .section-heading {
@@ -415,7 +416,6 @@ Header Style
   // background-color: #353433;
   background: linear-gradient(90deg, whitesmoke -0%, rgb(14, 152, 46) 40%);
   // background: linear-gradient(90deg, whitesmoke 0%, #353433 40%);
-  opacity: 90%;
   // color: whitesmoke;
   // background-color: inherit;
   display: grid;
@@ -1308,7 +1308,7 @@ Infos Style
   background-size: cover;
   background-position: center center;
   padding: 120px 0px;
-  margin-top: 120px;
+  // margin-top: 20px;
 }
 
 .infos .main-content {
@@ -2578,6 +2578,19 @@ body {
   .pre-header .left-info ul li a {
     font-size: 13px;
   }
+
+  .pic {
+    display: none;
+  }
+
+  .main-banner:after {
+    content: none;
+  }
+
+  .services::before {
+    content: none;
+  }
+
   .main-banner .caption {
     padding: 30px !important;
     text-align: center;
