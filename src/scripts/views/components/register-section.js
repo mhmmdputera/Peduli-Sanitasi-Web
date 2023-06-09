@@ -126,7 +126,7 @@ class RegisterSection extends HTMLElement {
                 email: email,
               });
               alert("Your Account Has Been Made!");
-              window.location.href = "login.html";
+              window.location.href = "#/login";
             })
             .catch((error) => {
               const errorCode = error.code;
