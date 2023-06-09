@@ -12,33 +12,44 @@ class LoginSection extends HTMLElement {
     return false;
   }
 
+  logout() {
+    sessionStorage.removeItem("userData");
+    window.location.href = "#/login";
+    location.reload();
+  }
+
 
   render() {
     if (this.isUserLoggedIn()) {
       this.innerHTML = `
       <div class="myspace"></div>
       <section class="vh-100 gradient-custom-3">
-      <div class="container py-5 h-100">
+        <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
-              <div class="card" style="border-radius: 1rem;">
-                  <div class="row g-0">
-                  <div class="col-md-6 col-lg-5 d-none d-md-block">
-                      <div class="col">
-                          <img src="images/Logo Login 1 - No Background.png" alt="login form" class="fotoDone" />
-                      </div>
+            <div class="card" style="border-radius: 1rem;">
+              <div class="row g-0">
+                <div class="col-md-6 col-lg-5 d-none d-md-block">
+                  <div class="col">
+                    <img src="images/Logo Login 1 - No Background.png" alt="login form" class="fotoDone" />
                   </div>
-                  <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                </div>
+                <div class="col-md-6 col-lg-7 d-flex align-items-center">
                   <div class="card-body p-4 p-lg-5 text-black">
-
-                  <h1> Selamat Datang di Peduli Sanitasi!</h1>
-                 <p> Kami berkomitmen untuk meningkatkan kebersihan dan kesehatan melalui program-program sanitasi yang inovatif. Bersama-sama, mari kita bangun kesadaran akan pentingnya sanitasi yang baik dan memberikan dampak positif bagi masyarakat. Dengan bergabung di Peduli Sanitasi, Anda telah menjadi bagian dari perubahan yang lebih baik. Terima kasih atas kepedulian dan dukungan Anda dalam menjaga lingkungan bersih dan sehat. Bersama-sama, mari kita wujudkan sanitasi yang berkualitas untuk masa depan yang lebih baik.                 </p>
-                  </div></div>
+                    <h1> Selamat Datang di Peduli Sanitasi!</h1>
+                    <p> Kami berkomitmen untuk meningkatkan kebersihan dan kesehatan melalui program-program sanitasi yang inovatif. Bersama-sama, mari kita bangun kesadaran akan pentingnya sanitasi yang baik dan memberikan dampak positif bagi masyarakat. Dengan bergabung di Peduli Sanitasi, Anda telah menjadi bagian dari perubahan yang lebih baik. Terima kasih atas kepedulian dan dukungan Anda dalam menjaga lingkungan bersih dan sehat. Bersama-sama, mari kita wujudkan sanitasi yang berkualitas untuk masa depan yang lebih baik. </p>
+                    <button id="logoutButton" class="btn btn-danger">Logout</button>
                   </div>
+                </div>
               </div>
+            </div>
           </div>
-      </div>
-  </section>
-      `;
+        </div>
+      </section>
+    `;
+
+    const logoutButton = document.getElementById("logoutButton");
+    logoutButton.addEventListener("click", this.logout);
+
     } else {
       this.innerHTML = `
     <div class="myspace"></div>
