@@ -6,4 +6,4 @@ const createButtonMenuClose = () => `
   <img tabindex="0" aria-label="tombol-tutup-menu-navigasi" src="icons/x.svg" alt="tombol-tutup-menu-navigasi">
 `;
 
-export {createButtonMenuClose, createButtonMenuOpen};
+export { createButtonMenuClose, createButtonMenuOpen };
