@@ -60,3 +60,20 @@
 .text:hover {
   color: black;
 }
+
+.fotoDone {
+  width: 500px;
+  border-radius: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+}
+
+.card-body {
+  padding: 20px !important;
+}
+
+.card-body p {
+  text-align: justify;
+}

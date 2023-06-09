@@ -1,7 +1,7 @@
 import Swal from 'sweetalert2';
+
 class DiscussionForm extends HTMLElement {
   connectedCallback() {
-
     if (!this.isUserLoggedIn()) {
       Swal.fire({
         title: 'Anda harus login terlebih dahulu!',
@@ -10,7 +10,6 @@ class DiscussionForm extends HTMLElement {
       }).then(() => {
         window.location.href = '#/login';
       });
-
       return;
     }
 
@@ -20,40 +19,52 @@ class DiscussionForm extends HTMLElement {
   }
 
   isUserLoggedIn() {
-   const userData = sessionStorage.getItem("userData");
-   if (userData) {
-     const user = JSON.parse(userData);
-     return user !== null;
-   }
-   return false;
+    const userData = sessionStorage.getItem("userData");
+    if (userData) {
+      const user = JSON.parse(userData);
+      return user !== null;
+    }
+    return false;
   }
+
+  getUserData() {
+    const userData = sessionStorage.getItem("userData");
+    if (userData) {
+      const user = JSON.parse(userData);
+      return user;
+    }
+    return null;
+  }
+
 
   render() {
     this.innerHTML = `
     <div class="space"></div>
     <div class="container">
-        <div class="section-heading">
-            <h2>Forum <em>Diskusi</em>
-            </h2>
-            <div class="line-dec"></div>
-            <p>
-                Tambahkan Diskusi Baru
-            </p>
-            <form id="postForm">
-                <label for="author">Nama:</label>
-                <input type="text" id="author" required>
-    
-                <label for="message">Pesan:</label>
-                <textarea id="message" required></textarea>
-    
-                <button type="submit">Kirim</button>
-            </form>
-            <h2>Posting Terbaru</h2>
-            <div id="postsContainer"></div>
-            <div class="space"></div>
-        </div>
+      <div class="section-heading">
+        <h2>Forum <em>Diskusi</em></h2>
+        <div class="line-dec"></div>
+        <h4>Selamat datang di Forum Diskusi Web Peduli Sanitasi!</h4>
+        <p>Mari kita jadikan forum ini sebagai wadah yang positif untuk berbagi pengalaman, pengetahuan, dan inovasi terkait sanitasi. Bersama-sama, kita dapat menciptakan perubahan yang signifikan dan berdampak positif bagi kesehatan dan kualitas hidup banyak orang.</p>
+        <form id="postForm">
+          <label for="author">Nama:</label>
+          <input type="text" id="author" required><br>
+          <label for="message">Pesan:</label>
+          <textarea id="message" required></textarea>
+          <button type="submit">Kirim</button>
+        </form>
+        <h2>Posting Terbaru</h2>
+        <div id="postsContainer"></div>
+        <div class="space"></div>
+      </div>
     </div>
     `;
+
+    const authorInput = this.querySelector('#author');
+    const userData = this.getUserData();
+    if (userData) {
+      authorInput.value = userData.email;
+    }
   }
 
   addEventListeners() {
