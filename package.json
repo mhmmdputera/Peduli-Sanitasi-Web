@@ -6,7 +6,9 @@
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "serve": "http-server dist"
+    "serve": "http-server dist",
+    "build-serve": "npm run build && npm run serve",
+    "lint": "eslint ./src"
   },
   "keywords": [],
   "author": "",
