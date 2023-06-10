@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "serve": "http-server dist"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
     "css-loader": "^6.7.1",
     "eslint": "^8.17.0",
     "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.1",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^4.2.0",
     "karma": "^6.4.1",
@@ -34,12 +36,14 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2",
     "webpack-merge": "^5.8.0",
-    "whatwg-fetch": "^3.6.2"
+    "whatwg-fetch": "^3.6.2",
+    "workbox-webpack-plugin": "^7.0.0"
   },
   "dependencies": {
     "jquery": "^3.7.0",
     "owl.carousel": "^2.3.4",
     "regenerator-runtime": "^0.13.9",
-    "sweetalert2": "^11.7.11"
+    "sweetalert2": "^11.7.11",
+    "workbox-window": "^7.0.0"
   }
 }
