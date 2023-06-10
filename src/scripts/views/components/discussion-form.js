@@ -48,9 +48,9 @@ class DiscussionForm extends HTMLElement {
         <p>Mari kita jadikan forum ini sebagai wadah yang positif untuk berbagi pengalaman, pengetahuan, dan inovasi terkait sanitasi. Bersama-sama, kita dapat menciptakan perubahan yang signifikan dan berdampak positif bagi kesehatan dan kualitas hidup banyak orang.</p>
         <form id="postForm">
           <label for="author">Nama:</label>
-          <input type="text" id="author" required><br>
-          <label for="message">Pesan:</label>
-          <textarea id="message" required></textarea>
+          <input type="text" id="author" class="formbox" required><br>
+          <label for="message">Pesan:</label><br>
+          <textarea id="message" class="formbox" required></textarea>
           <button type="submit">Kirim</button>
         </form>
         <h2>Posting Terbaru</h2>
@@ -89,13 +89,14 @@ class DiscussionForm extends HTMLElement {
       //menambahkan fitur Komentar
 
       const komentarform = document.createElement('form');
-      komentarform.classList.add('comment-form');
+      komentarform.classList.add('comment-form' );
       komentarform.dataset.postIndex = index;
       komentarform.addEventListener('submit', this.addComment.bind(this));
 
       const komentarInput = document.createElement('input');
       komentarInput.type = 'text';
       komentarInput.placeholder = 'Tambahkan komentar...';
+      komentarInput.classList.add('formbox');
 
       const komentarButton = document.createElement('button');
       komentarButton.type = 'submit';
@@ -105,7 +106,7 @@ class DiscussionForm extends HTMLElement {
       komentarform.appendChild(komentarButton);
 
       const komentarContainer = document.createElement('div');
-      komentarContainer.classList.add('comment-container');
+      komentarContainer.classList.add('comment-container' );
 
       post.comments.forEach(comment => {
         const commentElement = document.createElement('p');
@@ -116,8 +117,8 @@ class DiscussionForm extends HTMLElement {
 
       postElement.appendChild(authorElement);
       postElement.appendChild(messageElement);
-      postElement.appendChild(komentarform);
       postElement.appendChild(komentarContainer);
+      postElement.appendChild(komentarform);
 
       postsContainer.appendChild(postElement);
     });
