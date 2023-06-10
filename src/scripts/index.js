@@ -27,7 +27,7 @@ import '../funFactsData';
 import 'jquery';
 import 'owl.carousel';
 import '../public/js/owl-carousel'
-import Swal from 'sweetalert2';
+import swRegister from './utils/sw-register';
 
 
 const app = new App({
@@ -42,6 +42,7 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
 
 // $('.owl-features').owlCarousel({
