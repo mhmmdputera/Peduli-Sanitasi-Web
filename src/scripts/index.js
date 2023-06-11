@@ -30,6 +30,7 @@ import '../public/js/owl-carousel'
 import swRegister from './utils/sw-register';
 
 
+
 const app = new App({
   button: document.querySelector('.button-container'),
   drawer: document.querySelector('nav'),

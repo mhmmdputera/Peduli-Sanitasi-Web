@@ -12,7 +12,7 @@ class DiscussionForm extends HTMLElement {
       });
       return;
     }
-
+    
     this.render();
     this.addEventListeners();
     this.posts = [];

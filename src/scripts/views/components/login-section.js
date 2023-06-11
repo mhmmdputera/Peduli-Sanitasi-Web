@@ -1,3 +1,6 @@
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+
 class LoginSection extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -138,7 +141,7 @@ class LoginSection extends HTMLElement {
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
       import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
-      import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+      import { signInWithEmailAndPassword, onAuthStateChanged  } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
       import { getAuth } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 
       // Your web app's Firebase configuration
@@ -175,23 +178,37 @@ class LoginSection extends HTMLElement {
             });
 
             // Simpan data pengguna yang sudah login ke dalam sessionStorage
-      const userData = {
-        uid: user.uid,
-        email: user.email,
-      };
-      sessionStorage.setItem("userData", JSON.stringify(userData));
-
-      
+            const userData = {
+              uid: user.uid,
+              email: user.email,
+            };
+            sessionStorage.setItem("userData", JSON.stringify(userData));
+    
             window.location.href = "#/diskusi";
           })
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
     
-            alert(errorMessage);
+            if (errorCode === "auth/network-request-failed") {
+              onAuthStateChanged(auth, (user) => {
+                if (user) {
+                  const userData = {
+                    uid: user.uid,
+                    email: user.email,
+                  };
+                  sessionStorage.setItem("userData", JSON.stringify(userData));
+    
+                  window.location.href = "#/diskusi";
+                } else {
+                  alert("You are currently offline. Please check your internet connection.");
+                }
+              });
+            } else {
+              alert(errorMessage);
+            }
           });
       });
-  
     `;
     
     this.appendChild(scriptElement);

@@ -17,7 +17,7 @@ class NavBar extends HTMLElement {
       </div>
       <nav id="navigationDrawer" class="app-bar__navigation">
         <ul>
-        <li class="app-bar__item"><a href="/" class="active">Home</a></li>
+        <li class="app-bar__item"><a href="#/" class="active">Home</a></li>
         <li class="app-bar__item"><a href="#/article">Article</a></li>
         <li class="app-bar__item"><a href="#/diskusi">Discussion Forum</a></li>
         <li class="app-bar__item"><a href="#/about">About</a></li>
