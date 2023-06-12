@@ -1,6 +1,12 @@
 import Swal from 'sweetalert2';
+import { openDB } from 'idb';
 
 class DiscussionForm extends HTMLElement {
+  constructor() {
+    super();
+    this.dbPromise = null;
+  }
+
   connectedCallback() {
     if (!this.isUserLoggedIn()) {
       Swal.fire({
@@ -12,10 +18,59 @@ class DiscussionForm extends HTMLElement {
       });
       return;
     }
-    
+
     this.render();
     this.addEventListeners();
     this.posts = [];
+    this.initializeIndexedDB();
+    this.fetchPostsFromIndexedDB();
+  }
+
+  initializeIndexedDB() {
+    this.dbPromise = openDB('DiscussionDB', 1, {
+      upgrade(db) {
+        if (!db.objectStoreNames.contains('posts')) {
+          const objectStore = db.createObjectStore('posts', { keyPath: 'id', autoIncrement: true });
+          objectStore.createIndex('author', 'author', { unique: false });
+          objectStore.createIndex('message', 'message', { unique: false });
+          objectStore.createIndex('comments', 'comments', { unique: false });
+        }
+      }
+    });
+  }
+
+  async fetchPostsFromIndexedDB() {
+    const db = await this.dbPromise;
+    const transaction = db.transaction('posts', 'readonly');
+    const objectStore = transaction.objectStore('posts');
+
+    const posts = await objectStore.getAll();
+
+    if (posts) {
+      this.posts = posts;
+      this.displayPosts();
+    }
+  }
+
+  async savePostToIndexedDB(post) {
+    const db = await this.dbPromise;
+    const transaction = db.transaction('posts', 'readwrite');
+    const objectStore = transaction.objectStore('posts');
+
+    await objectStore.add(post);
+    console.log('Post saved to IndexedDB');
+  }
+
+  async addCommentToIndexedDB(postId, comment) {
+    const db = await this.dbPromise;
+    const transaction = db.transaction('posts', 'readwrite');
+    const objectStore = transaction.objectStore('posts');
+
+    const post = await objectStore.get(postId);
+    post.comments.push(comment);
+
+    await objectStore.put(post);
+    console.log('Comment saved to IndexedDB');
   }
 
   isUserLoggedIn() {
@@ -109,12 +164,46 @@ class DiscussionForm extends HTMLElement {
       komentarContainer.classList.add('comment-container' );
 
       post.comments.forEach(comment => {
+        const commentContainer = document.createElement('div');
+        commentContainer.classList.add('comment-container');
+
+        const usernameElement = document.createElement('span');
+        usernameElement.classList.add('username');
+        const userData = this.getUserData();
+        const username = userData ? userData.email : 'Anonymous';
+        usernameElement.textContent = username;
+
         const commentElement = document.createElement('p');
         commentElement.textContent = comment;
 
-        komentarContainer.appendChild(commentElement);
+        commentContainer.appendChild(usernameElement);
+        commentContainer.appendChild(commentElement);
+
+        komentarContainer.appendChild(commentContainer);
       });
 
+      // menambah fitur edit dan delete
+      const editDeleteContainer = document.createElement('div');
+      editDeleteContainer.classList.add('edit-delete-container');
+
+      const editButton = document.createElement('button');
+      editButton.textContent = 'Edit';
+      editButton.classList.add('post-button', 'edit');
+      editButton.addEventListener('click', () => {
+        this.editPost(index);
+      });
+      
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.classList.add('post-button', 'delete');
+      deleteButton.addEventListener('click', () => {
+        this.deletePost(index);
+      });
+      
+      editDeleteContainer.appendChild(editButton);
+      editDeleteContainer.appendChild(deleteButton);
+  
+      postElement.appendChild(editDeleteContainer);
       postElement.appendChild(authorElement);
       postElement.appendChild(messageElement);
       postElement.appendChild(komentarContainer);
@@ -124,7 +213,92 @@ class DiscussionForm extends HTMLElement {
     });
   }
 
-  addPost(event) {
+  //editpost
+  editPost(index) {
+    const postElement = this.querySelector(`#postsContainer > div:nth-child(${index + 1})`);
+    const post = this.posts[index];
+
+    const authorElement = postElement.querySelector('h4');
+    const messageElement = postElement.querySelector('p');
+
+    // Membuat form edit
+    const editForm = document.createElement('form');
+
+    const authorInput = document.createElement('input');
+    authorInput.type = 'text';
+    authorInput.classList.add('formbox');
+    authorInput.value = post.author;
+
+    const messageInput = document.createElement('textarea');
+    messageInput.classList.add('formbox');
+    messageInput.value = post.message;
+
+    const updateButton = document.createElement('button');
+    updateButton.textContent = 'Update';
+
+    editForm.appendChild(authorInput);
+    editForm.appendChild(messageInput);
+    editForm.appendChild(updateButton);
+
+    // Menangani perubahan saat tombol update ditekan
+    updateButton.addEventListener('click', () => {
+      post.author = authorInput.value;
+      post.message = messageInput.value;
+
+      // Hapus form edit dan tampilkan kembali elemen teks yang diperbarui
+      postElement.removeChild(editForm);
+      authorElement.textContent = post.author;
+      messageElement.textContent = post.message;
+    });
+
+    // Hapus elemen teks dan tampilkan form edit
+    postElement.removeChild(authorElement);
+    postElement.removeChild(messageElement);
+    postElement.appendChild(editForm);
+  }
+
+  //updatepost
+  updatePost(index) {
+    const authorInput = this.querySelector('#author');
+    const messageInput = this.querySelector('#message');
+    
+    const author = authorInput.value;
+    const message = messageInput.value;
+    
+    this.posts[index].author = author;
+    this.posts[index].message = message;
+    
+    // Hapus postingan lama dari this.posts
+    this.posts.splice(index, 1);
+
+    this.displayPosts();
+    
+    // Reset form input
+    authorInput.value = '';
+    messageInput.value = '';
+    
+    const submitButton = this.querySelector('#submitButton');
+    submitButton.textContent = 'Kirim';
+    submitButton.removeEventListener('click', this.updatePost.bind(this));
+    submitButton.addEventListener('click', this.addPost.bind(this));
+  }
+
+  //deletepost
+  async deletePost(index) {
+    const postId = this.posts[index].id;
+
+  const db = await this.dbPromise;
+  const transaction = db.transaction('posts', 'readwrite');
+  const objectStore = transaction.objectStore('posts');
+
+  await objectStore.delete(postId);
+  console.log('Post deleted from IndexedDB');
+
+  this.posts.splice(index, 1);
+  this.displayPosts();
+  }
+
+  async addPost(event) {
     event.preventDefault();
 
     const authorInput = this.querySelector('#author');
@@ -140,6 +314,7 @@ class DiscussionForm extends HTMLElement {
     };
 
     this.posts.push(newPost);
+    await this.savePostToIndexedDB(newPost);
 
     this.displayPosts();
 
@@ -148,7 +323,7 @@ class DiscussionForm extends HTMLElement {
     messageInput.value = '';
   }
 
-  addComment(event) {
+  async addComment(event) {
     event.preventDefault();
 
     const komentarInput = event.target.querySelector('input');
@@ -157,6 +332,8 @@ class DiscussionForm extends HTMLElement {
     const postIndex = event.target.dataset.postIndex;
 
     this.posts[postIndex].comments.push(komentar);
+
+    await this.addCommentToIndexedDB(this.posts[postIndex].id, komentar);
 
     this.displayPosts();
 
