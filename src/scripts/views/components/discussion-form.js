@@ -244,6 +244,7 @@ class DiscussionForm extends HTMLElement {
 
     const updateButton = document.createElement('button');
     updateButton.textContent = 'Update';
+    updateButton.classList.add('post-button', 'edit');
 
     editForm.appendChild(authorInput);
     editForm.appendChild(messageInput);
