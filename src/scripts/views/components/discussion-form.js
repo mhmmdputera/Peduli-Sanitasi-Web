@@ -72,6 +72,15 @@ class DiscussionForm extends HTMLElement {
     await objectStore.put(post);
     console.log('Comment saved to IndexedDB');
   }
+  
+  async updatePostInIndexedDB(post) {
+    const db = await this.dbPromise;
+    const transaction = db.transaction('posts', 'readwrite');
+    const objectStore = transaction.objectStore('posts');
+  
+    await objectStore.put(post);
+    console.log('Post updated in IndexedDB');
+  }
 
   isUserLoggedIn() {
     const userData = sessionStorage.getItem("userData");
@@ -249,6 +258,8 @@ class DiscussionForm extends HTMLElement {
       postElement.removeChild(editForm);
       authorElement.textContent = post.author;
       messageElement.textContent = post.message;
+      
+      this.updatePostInIndexedDB(post); // Menyimpan pembaruan pada IndexedDB
     });
 
     // Hapus elemen teks dan tampilkan form edit
@@ -281,6 +292,8 @@ class DiscussionForm extends HTMLElement {
     submitButton.textContent = 'Kirim';
     submitButton.removeEventListener('click', this.updatePost.bind(this));
     submitButton.addEventListener('click', this.addPost.bind(this));
+    
+    this.updatePostInIndexedDB(this.posts); // Menyimpan pembaruan pada IndexedDB
   }
 
   //deletepost
