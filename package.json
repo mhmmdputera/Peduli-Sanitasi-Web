@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "firebase": "^9.22.2",
+    "idb": "^7.1.1",
     "jquery": "^3.7.0",
     "owl.carousel": "^2.3.4",
     "regenerator-runtime": "^0.13.9",
