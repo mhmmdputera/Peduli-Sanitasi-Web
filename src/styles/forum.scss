@@ -93,3 +93,70 @@ button[type="submit"]:hover {
   padding: 10px;
   margin-bottom: 10px;
 }
+
+// edit button edit dan delete
+.post-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #4CAF50;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-button.edit {
+  background-color: #2196F3;
+}
+
+.post-button.delete {
+  background-color: #F44336;
+}
+
+.post-button:hover {
+  background-color: #555;
+}
+
+// atur posisi edit dan delete
+.post {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.author {
+  margin-bottom: 5px;
+}
+
+.edit-delete-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.edit-delete-container button {
+  margin-left: 5px;
+}
+
+//kolom komentar
+
+.comment-container {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+//nama user komentar
+.comment-container .username {
+  color: rgb(16, 124, 52);
+  font-weight: bold;
+}
+
