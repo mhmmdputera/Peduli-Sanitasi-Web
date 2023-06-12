@@ -316,6 +316,9 @@ class DiscussionForm extends HTMLElement {
     this.posts.push(newPost);
     await this.savePostToIndexedDB(newPost);
 
+    // lakukan auto load
+    await this.fetchPostsFromIndexedDB();
+
     this.displayPosts();
 
     // Reset form input
