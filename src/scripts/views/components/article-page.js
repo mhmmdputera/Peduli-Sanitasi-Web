@@ -1,4 +1,5 @@
 import articledataJson from '../../../articleData.json';
+import $ from 'jquery';
 
 class ArticlePage extends HTMLElement {
   connectedCallback() {
@@ -19,14 +20,11 @@ class ArticlePage extends HTMLElement {
       </div>
     `;
     const articleLinks = this.querySelectorAll('a');
-    articleLinks.forEach(link => {
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const target = event.target;
-        const href = target.getAttribute('href');
-        window.location.href = href;
-        window.scrollTo(0, 0);
-      });
+    $(articleLinks).on('click', function(event) {
+      event.preventDefault();
+      const href = $(this).attr('href');
+      window.location.href = href;
+      window.scrollTo(0, 0);
     });
   }
 
