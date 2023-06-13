@@ -2,6 +2,7 @@ const detailArticle = {
     async render() {
       return `
        <detail-article></detail-article>
+       <other-article></other-article>
       `;
     },
    
