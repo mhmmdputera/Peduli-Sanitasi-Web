@@ -1,7 +1,6 @@
 import '../components/main-banner';
 import '../components/tentang-sanitasi';
 import '../components/sanitasi-sampah';
-import '../components/article-section';
 import '../components/funt-fact';
 
 const Home = {
