@@ -14,7 +14,6 @@ import './views/components/custom-footer';
 import './views/components/tentang-sanitasi';
 import './views/components/sanitasi-sampah';
 import './views/components/funt-fact';
-import './views/components/article-section';
 import './views/components/about-team';
 import './views/components/article-page';
 import './views/components/detail-article';
