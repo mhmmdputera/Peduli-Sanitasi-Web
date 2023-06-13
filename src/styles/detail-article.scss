@@ -14,6 +14,7 @@
     margin-top: 25px;
     font-size: 18px;
     font-weight: bold;
+    line-height: 1.5;
   }
   
   .detail_article .author {
@@ -38,7 +39,7 @@
   }
   
   .detail_article .deskripsi p {
-    line-height: 25px;
+    line-height: 18px;
     text-align: justify;
     margin-bottom: 16px;
     margin-top: 0;
@@ -47,7 +48,7 @@
   
   .detail_article .deskripsi ul {
     padding-left: 40px;
-    line-height: 25px;
+    line-height: 18px;
     text-align: justify;
     font-size: 10px;
     list-style: disc;
@@ -57,19 +58,21 @@
     margin: 0;
     font-size: 12px;
     font-weight: bold;
+    line-height: 1.5;
   }
   
   .detail_article .deskripsi h4 {
     margin: 0;
     font-size: 10px;
     font-weight: bold;
+    line-height: 1.5;
   }
   
   .detail_article .deskripsi .isi {
     padding-left: 20px;
     padding-top: 0;
     text-align: justify;
-    line-height: 25px;
+    line-height: 18px;
     font-size: 10px;
   }
   
@@ -77,14 +80,14 @@
     padding-left: 40px;
     padding-top: 0;
     text-align: justify;
-    line-height: 25px;
+    line-height: 18px;
     font-size: 10px;
   }
   
   .detail_article .deskripsi .quotes {
     display: flex;
     text-align: center;
-    line-height: 25px;
+    line-height: 18px;
     font-style: italic;
     color: rgba(0, 0, 0, 0.7);
     padding-bottom: 20px;
@@ -112,11 +115,13 @@
   
     .detail_article .deskripsi p {
         font-size: 12px;
+        line-height: 21px;
     }
   
     .detail_article .deskripsi ul {
-      list-style-type: disc;
+        list-style-type: disc;
         font-size: 12px;
+        line-height: 21px;
     }
   
     .detail_article .deskripsi h3 {
@@ -129,14 +134,17 @@
   
     .detail_article .deskripsi .isi {
         font-size: 12px;
+        line-height: 21px;
     }
   
     .detail_article .deskripsi .isi_1 {
         font-size: 12px;
+        line-height: 21px;
     }
   
     .detail_article .deskripsi .quotes {
         font-size: 11px;
+        line-height: 21px;
     }
   }
   
@@ -157,10 +165,12 @@
   
     .detail_article .deskripsi p {
         font-size: 14px;
+        line-height: 25px;
     }
   
     .detail_article .deskripsi ul {
         font-size: 14px;
+        line-height: 25px;
     }
   
     .detail_article .deskripsi h3 {
@@ -173,14 +183,17 @@
   
     .detail_article .deskripsi .isi {
         font-size: 14px;
+        line-height: 25px;
     }
   
     .detail_article .deskripsi .isi_1 {
         font-size: 14px;
+        line-height: 25px;
     }
   
     .detail_article .deskripsi .quotes {
         font-size: 13px;
+        line-height: 25px;
     }
   }
   
@@ -202,10 +215,12 @@
   
     .detail_article .deskripsi p {
         font-size: 16px;
+        line-height: 30px;
     }
   
     .detail_article .deskripsi ul {
         font-size: 16px;
+        line-height: 30px;
     }
   
     .detail_article .deskripsi h3 {
@@ -218,14 +233,17 @@
   
     .detail_article .deskripsi .isi {
         font-size: 16px;
+        line-height: 30px;
     }
   
     .detail_article .deskripsi .isi_1 {
         font-size: 16px;
+        line-height: 30px;
     }
   
     .detail_article .deskripsi .quotes {
         font-size: 15px;
+        line-height: 30px;
     }
   }
   
