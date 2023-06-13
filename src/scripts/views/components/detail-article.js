@@ -1,18 +1,3 @@
-// class DetailArticle extends HTMLElement {
-//     connectedCallback() {
-//       this.render();
-//     }
-  
-//     render() {
-//       this.innerHTML = `
-//         <div class="container">
-//             <div class="detail_article" id="detail_article" tabindex="0"></div>
-//         </div>
-//       `;
-//     }
-//   }
-  
-//   customElements.define('detail-article', DetailArticle);
 import articledataJson from '../../../articleData.json';
 
 class DetailArticle extends HTMLElement {
@@ -47,7 +32,7 @@ class DetailArticle extends HTMLElement {
     }
   
     getArticleDataById(articleId) {
-      const items = articledataJson.artikel;
+      const items = articledataJson.article;
       return items.find(item => item.id === articleId);
     }
   
@@ -66,4 +51,4 @@ class DetailArticle extends HTMLElement {
   }
   
   customElements.define('detail-article', DetailArticle);
-  
+ 
