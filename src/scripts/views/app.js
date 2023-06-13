@@ -1,7 +1,7 @@
 import navbarInitiator from '../utils/navbar-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
-import 'owl.carousel';import 'jquery';
+import 'jquery';
 
 class App {
   constructor({ button, drawer, content }) {
