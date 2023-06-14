@@ -57,12 +57,12 @@ class LoginSection extends HTMLElement {
       this.innerHTML = `
     <div class="myspace"></div>
     <section class="vh-100 gradient-custom-3">
-    <div class="container py-5 h-100">
+    <div class="container py-1 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col col-xl-10">
+        <div class="col col-xl-9">
           <div class="card" style="border-radius: 1rem;">
             <div class="row g-0">
-            <div class="col-md-6 col-lg-5 d-none d-md-block">
+            <div class="col-md-6 col-lg-5 p-1 d-none d-md-block">
             <img
               src="images/Logo Login 2.png"
               alt="login form"
@@ -72,9 +72,9 @@ class LoginSection extends HTMLElement {
           </div>
           
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
-                <div class="card-body p-4 p-lg-5 text-black">
+                <div class="card-body p-4 p-lg-4 text-black">
                   <form>
-                    <div class="d-flex align-items-center mb-3 pb-1 mt-5">
+                    <div class="d-flex align-items-center mb-3 pb-1 mt-1">
                       <span
                         class="h1 fw-bold mb-0"
                         style="font-size: x-large;"
@@ -83,7 +83,7 @@ class LoginSection extends HTMLElement {
                     </div>
 
                     <h5
-                      class="fw-normal mb-3 pb-3"
+                      class="fw-normal mb-3 pb-1"
                       style="letter-spacing: 1px;"
                     >
                       Login into your account
@@ -98,7 +98,7 @@ class LoginSection extends HTMLElement {
                       />
                     </div>
 
-                    <div class="form-outline mb-4 mt-3">
+                    <div class="form-outline mb-3 pb-3 mt-3">
                       <input
                         type="password"
                         id="password"
@@ -107,7 +107,7 @@ class LoginSection extends HTMLElement {
                       />
                     </div>
 
-                    <div class="pt-1 mb- d-flex justify-content-center">
+                    <div class="pt-3 mt-4 d-flex justify-content-center">
                       <button
                         type="button"
                         class="block btn btn-success btn-block btn-lg  gradient-custom-4 text-body"
@@ -117,7 +117,7 @@ class LoginSection extends HTMLElement {
                       </button>
                     </div>
 
-                    <p class="mb-5 pb-lg-2 mt-4" style="color: #393f81;">
+                    <p class="mb-1 pb-1 mt-4" style="color: #393f81;">
                       Don't have an account?
                       <a href="#/register" class="text"
                         >Register here</a
