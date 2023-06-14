@@ -156,6 +156,7 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: auto;
 }
 
 a {
@@ -2529,6 +2530,9 @@ body {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+  }
+  .app-bar {
+    background: linear-gradient(90deg, whitesmoke -0%, rgb(14, 152, 46) 110%);
   }
 }
 
