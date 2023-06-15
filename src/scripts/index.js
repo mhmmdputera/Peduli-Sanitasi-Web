@@ -5,6 +5,7 @@ import '../styles/forum.scss';
 import '../styles/animate.scss';
 import '../styles/flex-slider.scss';
 import '../styles/fontawesome.scss';
+import '../styles/article-page.scss';
 import '../styles/detail-article.scss';
 import '../styles/other-article.scss';
 import '../styles/login-register-style.scss';
@@ -19,15 +20,9 @@ import './views/components/article-page';
 import './views/components/detail-article';
 import './views/components/other-article';
 import './views/components/discussion-form';
-import './views/components/login-section'
-import './views/components/register-section'
-import '../articleData.json';
-import '../funFactsData.json';
-import 'jquery';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import 'swiper/swiper-bundle.min.css';
-import '../../node_modules/swiper/swiper-bundle.min.js';
+import './views/components/login-section';
+import './views/components/register-section';
+import './vendor';
 import swRegister from './utils/sw-register';
 
 
