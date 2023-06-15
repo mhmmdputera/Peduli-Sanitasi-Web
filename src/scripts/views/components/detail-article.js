@@ -1,5 +1,4 @@
-import articledataJson from '../../../articleData.json';
-import $ from 'jquery';
+import articledataJson from '../../../public/articleData.json';
 
 class DetailArticle extends HTMLElement {
     connectedCallback() {
@@ -45,7 +44,7 @@ class DetailArticle extends HTMLElement {
         return `
             <h1>${articleData.title}</h1>
             <p class="author">Penulis : <span>${articleData.author}</span> (${articleData.date})</p>
-            <img src="${articleData.image}" alt="${articleData['image-name']}" class="img-fluid">
+            <img data-src="${articleData.image}" alt="${articleData['image-name']}" class="img-fluid lazyload">
             <div class="deskripsi">${description}</div>
         `;
     }

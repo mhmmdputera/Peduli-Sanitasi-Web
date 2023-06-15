@@ -1,5 +1,5 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+// import firebase from 'firebase/app';
+// import 'firebase/firestore';
 
 class LoginSection extends HTMLElement {
   connectedCallback() {
@@ -33,7 +33,7 @@ class LoginSection extends HTMLElement {
               <div class="row g-0">
                 <div class="col-md-6 col-lg-5 d-none d-md-block">
                   <div class="col">
-                    <img src="images/Logo Login 1 - No Background.png" alt="login form" class="fotoDone" />
+                    <img data-src="images/Logo Login 1.png" alt="login form" class="fotoDone lazyload" />
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -64,9 +64,9 @@ class LoginSection extends HTMLElement {
             <div class="row g-0">
             <div class="col-md-6 col-lg-5 p-1 d-none d-md-block">
             <img
-              src="images/Logo Login 2.png"
+              data-src="images/Logo Login 2.png"
               alt="login form"
-              class="foto"
+              class="foto lazyload"
               style="border-radius: 1rem 0 0 1rem;"
             />
           </div>

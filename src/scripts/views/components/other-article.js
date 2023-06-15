@@ -1,5 +1,4 @@
-import articledataJson from '../../../articleData.json';
-import $ from 'jquery';
+import articledataJson from '../../../public/articleData.json';
 
 class OtherArticle extends HTMLElement {
   connectedCallback() {
@@ -74,7 +73,7 @@ class OtherArticle extends HTMLElement {
         return `
           <div class="place swiper-slide" id="place">
             <div class="image-box">
-              <img src="${article.image}" alt="${article['image-name']}">
+              <img data-src="${article.image}" class="lazyload" alt="${article['image-name']}">
             </div>
             <div class="title-author">
               <h3 class="title"><a href="#/article/${article.id}">${article.title}</a></h3>

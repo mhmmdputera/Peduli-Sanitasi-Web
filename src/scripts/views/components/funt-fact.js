@@ -13,7 +13,7 @@ class FunFact extends HTMLElement {
               <div class="row">
                 <div class="col-lg-6">
                   <div class="left-image">
-                    <img src="images/left-infos.png" alt="">
+                    <img data-src="images/left-infos.png" alt="" class"lazyload">
                   </div>
                 </div>
                 <div class="col-lg-6">

@@ -1,11 +1,11 @@
 class CustomFooter extends HTMLElement {
-    connectedCallback() {
-      this.render();
-      this.addNavigationEventListeners();
-    }
-  
-    render() {
-      this.innerHTML = `
+  connectedCallback() {
+    this.render();
+    this.addNavigationEventListeners();
+  }
+
+  render() {
+    this.innerHTML = `
       <footer>
       <div class="container">
         <div class="row">
@@ -37,18 +37,14 @@ class CustomFooter extends HTMLElement {
       </div>
     </footer>
       `;
-    }
-    
+  }
+
     addNavigationEventListeners() {
-      const navigationLinks = this.querySelectorAll('.scroll-to-section a');
-      navigationLinks.forEach((link) => {
-        link.addEventListener('click', () => {
-          window.scrollTo(0, 0);
-        });
+      $(this).find('.scroll-to-section a').on('click', () => {
+        window.scrollTo(0, 0);
       });
     }
-
   }
   
-  customElements.define('custom-footer', CustomFooter);
   
+  customElements.define('custom-footer', CustomFooter);

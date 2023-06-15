@@ -17,7 +17,7 @@ class AboutTeam extends HTMLElement {
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
               <div class="team-item text-center rounded overflow-hidden">
                 <div class="rounded-circle overflow-hidden m-4">
-                  <img class="img-fluid" src="images/Foto Putera2.png" alt="">
+                  <img class="img-fluid lazyload" data-src="images/Foto Putera.png" alt="Foto Muhammad Putera Ikhlasul Amal">
                 </div>
                 <h5 class="mb-0">Muhammad Putera <br> Ikhlasul Amal</h5>
                 <small>F074XA125 </small>
@@ -34,12 +34,10 @@ class AboutTeam extends HTMLElement {
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
               <div class="team-item text-center rounded overflow-hidden">
                 <div class="rounded-circle overflow-hidden m-4">
-                  <img class="img-fluid" src="images/Foto Alfi.png" alt="">
+                  <img class="img-fluid lazyload" data-src="images/Foto Alfi.png" alt="Foto Akhmad Alfian">
                 </div>
-                <h5 class="mb-0">Akhmad Alfian </h5>
+                <h5 class="mb-0"><br>Akhmad Alfian</h5>
                 <small>F074XA395 </small>
-                <br>
-                <br>
                 <div class="d-flex justify-content-center mt-3">
                   <a class="btn btn-square btn-secondary mx-1" href="https://www.linkedin.com/in/akhmad-alfian-370119279/" target="_blank" rel="noopener"><i
                       class="fab fa-linkedin-in"></i></a>
@@ -53,12 +51,10 @@ class AboutTeam extends HTMLElement {
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
               <div class="team-item text-center rounded overflow-hidden">
                 <div class="rounded-circle overflow-hidden m-4">
-                  <img class="img-fluid" src="images/Foto Putri.png" alt="">
+                  <img class="img-fluid lazyload" data-src="images/Foto Putri.png" alt="Foto Putri Nabella">
                 </div>
-                <h5 class="mb-0">Putri Nabella </h5>
+                <h5 class="mb-0"><br>Putri Nabella </h5>
                 <small>F005YA005</small>
-                <br>
-                <br>
                 <div class="d-flex justify-content-center mt-3">
                   <a class="btn btn-square btn-secondary mx-1" href="https://www.linkedin.com/in/putri-nabella-604218250/"
                     target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
@@ -72,7 +68,7 @@ class AboutTeam extends HTMLElement {
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
               <div class="team-item text-center rounded overflow-hidden">
                 <div class="rounded-circle overflow-hidden m-4">
-                  <img class="img-fluid" src="images/Foto Rahmi2.png" alt="">
+                  <img class="img-fluid lazyload" data-src="images/Foto Rahmi.png" alt="Khusnul Rahmi Maulidha">
                 </div>
                 <h5 class="mb-0">Khusnul Rahmi <br> Maulidha </h5>
                 <small>F005YA359 </small>

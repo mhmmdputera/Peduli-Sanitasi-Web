@@ -1,5 +1,4 @@
-import articledataJson from '../../../articleData.json';
-import $ from 'jquery';
+import articledataJson from '../../../public/articleData.json';
 
 class ArticlePage extends HTMLElement {
   connectedCallback() {
@@ -37,11 +36,11 @@ class ArticlePage extends HTMLElement {
           .join('');
 
         return `
-          <div class="col-lg-3 col-md-5 col-sm-8 col-8 border border-5 border-success rounded shadow">
+          <div class="col-lg-3 col-md-5 col-sm-8 col-8 contain rounded shadow">
             <div class="article_item" tabindex="0">
               <h1>${item.title}</h1>
               <p class="author">Penulis : <span>${item.author}</span> (${item.date})</p>
-              <img src="${item.image}" alt="${item['image-name']}" class="img-fluid">
+              <img data-src="${item.image}" alt="${item['image-name']}" class="img-fluid lazyload">
               ${description.slice(0, 150)} ... <a href="#/article/${item.id}">Baca Selengkapnya!</a>
             </div>
           </div>

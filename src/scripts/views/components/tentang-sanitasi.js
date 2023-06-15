@@ -61,7 +61,7 @@ class TentangSanitasi extends HTMLElement {
                               </p>
                             </div>
                             <div class="col-lg-5 align-self-center pic">
-                              <img src="images/Manfaat Sanitasi.png" alt="">
+                              <img data-src="images/Manfaat Sanitasi.png" class="lazyload" alt="">
                             </div>
                           </div>
                         </div>
@@ -89,7 +89,7 @@ class TentangSanitasi extends HTMLElement {
                               </p>
                             </div>
                             <div class="col-lg-5 align-self-center pic">
-                              <img src="images/Upaya Sanitasi.png" alt="">
+                              <img data-src="images/Upaya Sanitasi.png" class="lazyload" alt="">
                             </div>
                           </div>
                         </div>
@@ -182,7 +182,7 @@ class TentangSanitasi extends HTMLElement {
                               </div>
                             </div>
                             <div class="col-lg-5 align-self-center pic">
-                              <img src="images/Penerapan Sanitasi.png" alt="">
+                              <img data-src="images/Penerapan Sanitasi.png" class="lazyload" alt="">
                             </div>
                           </div>
                         </div>
@@ -191,7 +191,7 @@ class TentangSanitasi extends HTMLElement {
                         <div>
                           <div class="row">
                             <div class="col-lg-7">
-                              <h5>Berikut dampak kesahatan yang diakibatkan dari sanitasi yang buruk:</h5>
+                              <h5>Berikut dampak kesehatan yang diakibatkan dari sanitasi yang buruk:</h5>
                               <div class="line-dec"></div>
                               <div class="most-list sectionlist">
                                 <div class="container">
@@ -276,7 +276,7 @@ class TentangSanitasi extends HTMLElement {
                               </div>
                             </div>
                             <div class="col-lg-5 align-self-center pic">
-                              <img src="images/Dampak Sanitasi.png" alt="">
+                              <img data-src="images/Dampak Sanitasi.png" class="lazyload" alt="">
                             </div>
                           </div>
                         </div>

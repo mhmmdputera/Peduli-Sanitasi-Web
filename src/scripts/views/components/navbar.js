@@ -6,14 +6,14 @@ class NavBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <header class="app-bar">
+    <header class="app-bar">
         <div class="app-bar__menu">
           <button id="button-container" class="button-container">
             <img tabindex="0" aria-label="tombol-buka-menu-navigasi" src="icons/list.svg" />
           </button>
         </div>
         <div class="app-bar__brand" id="content">
-          <img src="./images/Logo Navbar - No Background.png" alt="Logo Peduli Sanitasi" />
+          <img data-src="./images/Logo Navbar.png" class="lazyload" alt="Logo Peduli Sanitasi" />
         </div>
         <nav id="navigationDrawer" class="app-bar__navigation">
           <ul>
@@ -25,27 +25,25 @@ class NavBar extends HTMLElement {
           </ul>
         </nav>
       </header>
+   
     `;
     this.addScrollEventListeners();
   }
 
   addNavigationEventListeners() {
-    const navigationLinks = this.querySelectorAll('.app-bar__item a');
-    navigationLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        window.scrollTo(0, 0);
-      });
+    $(this).find('.app-bar__item a').on('click', () => {
+      window.scrollTo(0, 0);
     });
   }
 
   addScrollEventListeners() {
     const navbar = this.querySelector('.app-bar');
-    window.addEventListener('scroll', function () {
+    $(window).on('scroll', () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 0) {
-        navbar.classList.add('scrolled');
+        $(navbar).addClass('scrolled');
       } else {
-        navbar.classList.remove('scrolled');
+        $(navbar).removeClass('scrolled');
       }
     });
   }
