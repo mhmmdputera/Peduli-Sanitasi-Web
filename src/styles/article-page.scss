@@ -1,0 +1,78 @@
+// ---------------------------------------------
+// Article Page Style
+// ---------------------------------------------
+
+.article_page {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.article_page .contain{
+  border: 5px solid #11c03a;
+}
+
+.article_page .title {
+  text-align: center;
+  padding-bottom: 50px;
+  color: #11c03a;
+  font-weight: 700;
+}
+
+.article_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.article_item h1 {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.article_item .author {
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.article_item .author span {
+  font-weight: bold;
+}
+
+.article_item img {
+  display: flex;
+  align-self: center;
+  width: 150px;
+  height: 150px;
+  justify-items: center;
+}
+
+.article_item .description {
+  padding-top: 10px;
+  font-size: 11px;
+  text-align: justify;
+  margin-bottom: 8px;
+  line-height: 20px;
+}
+
+.article_item .description a {
+  font-size: 11px;
+  font-style: normal;
+  font-weight: bold;
+  color: #dc3545;
+}
+
+.article_item .description a:hover {
+  background-color: #11c03a;
+  color: #fff;
+}
+
+.article_item .quotes {
+  font-size: 10px;
+  font-style: italic;
+  text-align: justify;
+}

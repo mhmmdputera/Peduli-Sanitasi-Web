@@ -51,7 +51,8 @@
 }
 
 .title-author .title a:hover{
-    color: red;
+    color: #dc3545;
+    font-weight: bold;
 }
 
 .title-author .author {
@@ -66,7 +67,7 @@
     right: -8px;
     left: auto;
     top: 54%;
-    color: #11c03a;
+    color: #198754;
     font-weight: bold;
     height: 40px;
     width: 40px;
@@ -78,7 +79,7 @@
     left: -8px;
     right: auto;
     top: 54%;
-    color: #11c03a;
+    color: #198754;
     font-weight: bold;
     height: 40px;
     width: 40px;
@@ -86,11 +87,11 @@
 }
 
 .other-article .swiper-navBtn-next:hover, .other-article .swiper-navBtn-prev:hover {
-    color: aqua;
+    color: #dc3545;
 }
 
 .swiper-pagination-bullet {
-    background-color: #11c03a !important;
+    background-color: #198754 !important;
     width: 8px !important;
     height: 8px !important;
 }
