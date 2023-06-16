@@ -444,8 +444,8 @@ Header Style
     margin: 0 auto 0 10px;
 
     img {
+      width: 100%;
       height: 80px;
-      width: auto;
       padding: 5px 0px;
     }
 
@@ -1980,6 +1980,8 @@ Happy Clients Style
 }
 
 .happy-clients ul.nacc li img {
+  width: 100%;
+  height: 100%;
   padding-left: 45px;
   z-index: -1;
 }
