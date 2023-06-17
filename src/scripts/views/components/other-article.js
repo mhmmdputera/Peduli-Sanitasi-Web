@@ -33,7 +33,7 @@ class OtherArticle extends HTMLElement {
       new Swiper('.slide-receptacle', {
         slidesPerView: 4,
         spaceBetween: 20,
-        slidesPerGroup: 4,
+        slidesPerGroup: 1,
         loop: true,
         centerSlide: true,
         fade: true,
