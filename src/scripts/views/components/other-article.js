@@ -31,9 +31,7 @@ class OtherArticle extends HTMLElement {
       });
 
       new Swiper('.slide-receptacle', {
-        slidesPerView: 4,
         spaceBetween: 20,
-        slidesPerGroup: 1,
         loop: true,
         centerSlide: true,
         fade: true,
@@ -50,15 +48,19 @@ class OtherArticle extends HTMLElement {
         breakpoints: {
            0: {
              slidesPerView: 1,
+             slidesPerGroup: 1,
            },
            520: {
              slidesPerView: 2,
+             slidesPerGroup: 2,
            },
            768: {
              slidesPerView: 3,
+             slidesPerGroup: 3,
            },
            1000: {
              slidesPerView: 4,
+             slidesPerGroup: 4,
            },
          },
       });
